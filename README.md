@@ -1,6 +1,6 @@
 Reminder Tracker App
 
-    Welcome to the Reminder Tracker App! This web-based application is designed to help you organize and manage your tasks efficiently. With a focus on simplicity and usability, it offers an intuitive platform for creating, tracking, and managing reminders.
+Welcome to the Reminder Tracker App! This web-based application is designed to help you organize and manage your tasks efficiently. With a focus on simplicity and usability, it offers an intuitive platform for creating, tracking, and managing reminders.
 
 🖥️ Live Demo
 
@@ -31,5 +31,5 @@ Access the live application here: [Reminder Tracker App](https://my-reminder-76y
     
 📧 Contact
 
-	If you have any questions or suggestions, feel free to reach out at:
+If you have any questions or suggestions, feel free to reach out at:
 	Email: fernandezlanceivangil@gmail.com
