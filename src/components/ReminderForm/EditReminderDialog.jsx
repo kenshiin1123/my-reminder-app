@@ -1,6 +1,6 @@
-import Reminder from "../../classes/reminder.model.js";
+import Reminder from "../../../classes/reminder.model.js";
 import { useForm } from "react-hook-form";
-import reminderStore from "../store/reminderStore.js";
+import reminderStore from "../../store/reminderStore.js";
 import { useEffect, useState } from "react";
 
 export default function EditReminderDialog() {
@@ -43,7 +43,6 @@ export default function EditReminderDialog() {
 
   // Handle form submission
   const onFormSubmit = (data) => {
-    console.log("Form Data:", data);
     const newReminder = new Reminder(
       data.title,
       data.description,

@@ -8,12 +8,13 @@ import RemindersPage from "./Pages/RemindersPage";
 import AddRemindersPage from "./Pages/AddReminderPage";
 import AboutPage from "./Pages/AboutPage";
 import Layout from "./Layout";
+import ErrorPage from "./ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    // errorElement: "Error!",
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,

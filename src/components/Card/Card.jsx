@@ -2,9 +2,9 @@ import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import { BsThreeDots } from "react-icons/bs";
 import { IoMdClose } from "react-icons/io";
-import Reminder from "../../classes/reminder.model";
-import reminderStore from "../store/reminderStore";
-import calculateTimeLeft from "../utils/calculateTimeLeft.js";
+import Reminder from "../../../classes/reminder.model.js";
+import reminderStore from "../../store/reminderStore";
+import calculateTimeLeft from "../../utils/calculateTimeLeft.js";
 
 function Card({
   id,

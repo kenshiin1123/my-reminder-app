@@ -1,6 +1,6 @@
-import Card from "./Card";
-import NoRemindersFound from "./NoRemindersFound.jsx";
-import reminderStore from "../store/reminderStore.js";
+import Card from "./Card.jsx";
+import NoRemindersFound from "../NoRemindersFound.jsx";
+import reminderStore from "../../store/reminderStore.js";
 import { useEffect } from "react";
 
 function Cards() {

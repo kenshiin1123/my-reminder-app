@@ -1,7 +1,11 @@
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast, Slide } from "react-toastify";
-import Reminder from "../../classes/reminder.model.js";
 import { useEffect } from "react";
+
+import Reminder from "../../../classes/reminder.model.js";
+import { Description } from "./Description.jsx";
+import { Title } from "./Title.jsx";
+import { TimeAndDate } from "./TimeAndDate.jsx";
 
 export default function AddReminderForm() {
   // Initialize the useForm hook with defaultValues
@@ -30,7 +34,6 @@ export default function AddReminderForm() {
 
   // Handle form submission
   const onFormSubmit = (data) => {
-    console.log("Form Data:", data);
     const newReminder = new Reminder(
       data.title,
       data.description,
@@ -46,52 +49,9 @@ export default function AddReminderForm() {
   return (
     <>
       <form className="addReminderForm" onSubmit={handleSubmit(onFormSubmit)}>
-        <h1>Reminder Details</h1>
-
-        {/* Title Input */}
-        <section>
-          <label htmlFor="title">Title</label>
-          <input
-            type="text"
-            id="title"
-            {...register("title", { required: "*Title is required" })}
-          />
-          {errors.title && <p>{errors.title.message}</p>}
-        </section>
-
-        {/* Description Input */}
-        <section>
-          <label htmlFor="description">Description</label>
-          <textarea id="description" {...register("description")}></textarea>
-          {errors.description && (
-            <p className="error">{errors.description.message}</p>
-          )}
-        </section>
-
-        {/* Time and Date Inputs */}
-        <div>
-          <section>
-            <label htmlFor="time">Time</label>
-            <input
-              type="time"
-              id="time"
-              {...register("time", { required: "*Time is required" })}
-            />
-            {errors.time && <p className="error">{errors.time.message}</p>}
-          </section>
-          <section>
-            <label htmlFor="date">Date</label>
-            <input
-              type="date"
-              id="date"
-              {...register("date", { required: "*Date is required" })}
-              min={new Date().toISOString().split("T")[0]} // Restrict to today or later
-            />
-            {errors.date && <p className="error">{errors.date.message}</p>}
-          </section>
-        </div>
-
-        {/* Submit Button */}
+        <Title register={register} errors={errors} />
+        <Description register={register} errors={errors} />
+        <TimeAndDate register={register} errors={errors} />
         <button type="submit">Confirm Reminder</button>
       </form>
       <ToastContainer

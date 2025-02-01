@@ -1,6 +1,6 @@
-import Cards from "../components/Cards";
+import Cards from "../components/Card/Cards";
 import Container from "../components/Container";
-import EditReminderDialog from "../components/EditReminderDialog";
+import EditReminderDialog from "../components/ReminderForm/EditReminderDialog";
 import { ToastContainer, Slide } from "react-toastify";
 import reminderStore from "../store/reminderStore";
 import { useEffect } from "react";

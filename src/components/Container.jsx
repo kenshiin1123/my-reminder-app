@@ -1,11 +1,11 @@
-import { element } from "prop-types";
+import PropTypes from "prop-types";
 
 function Container({ children }) {
   return <div className="container">{children}</div>;
 }
 
 Container.propTypes = {
-  children: element,
+  children: PropTypes.any,
 };
 
 export default Container;
